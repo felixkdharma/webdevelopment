@@ -1,19 +1,48 @@
+<!-- CSS Box Model -->
+<!-- jarak antara border dengan elemen dinamakan padding -->
+<!-- jarak antara border dengan diluar dari border dinamakan margin -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Box Model</title>
+    <style>
+      /* Write your CSS code here */
+      #box1 {
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+        padding: 20px;
+        border: 10px solid black;
+        margin: 0;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <title>CSS Box Model</title>
-  <style>
-    /* Write your CSS code here */
+      #box2 {
+        width: 200px;
+        height: 200px;
+        background-color: gold;
+        padding: 20px 10px;
+        border: solid black;
+        border-width: 20px 10px;
+        margin: 0px 0px 0px 260px;
+      }
 
-  </style>
-</head>
+      #box3 {
+        width: 200px;
+        height: 200px;
+        background-color: indianred;
+        border: 10px solid black;
+        margin: 0px 0px 0px 40px;
+      }
 
-<body>
+      #p {
+        margin: 0;
+      }
+    </style>
+  </head>
 
-
-  <!-- TODOs:
+  <body>
+    <!-- TODOs:
 1. Create 3 Boxes using the div element.
 2. Set their sizes to 200px heigh by 200px wide.
 3. Set different background colors for each of the boxes (I used cadetblue, gold and indianred).
@@ -29,6 +58,18 @@ Hint: Use the CSS inspector in Chrome.
 9. Set the margins for the divs so that each box corner touches the other. (See the goal image)
 -->
 
-</body>
+    <div id="box1">
+      <p id="p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+        sapien porttitor urna elementum lacinia. In id magna pulvinar, ultricies
+        lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque
+        magna. Phasellus dolor metus, laoreet ac convallis sit amet, efficitur
+        sed dolor.
+      </p>
+    </div>
 
+    <div id="box2"></div>
+
+    <div id="box3"></div>
+  </body>
 </html>
