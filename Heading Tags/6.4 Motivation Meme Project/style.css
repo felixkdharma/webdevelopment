@@ -1,0 +1,22 @@
+#h1 {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: black;
+}
+
+.main-content {
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 100px;
+}
+
+
+.image {
+  border: 5px solid white;
+  width: 100%;
+}
