@@ -1,0 +1,38 @@
+<!-- The Cascade Specifity and Inheritance -->
+<!-- There is 4 rules for the CSS Rules -->
+<!--  1. Position => posisi yang lebih bawah akan di prioritaskan
+                     (jika terjadi ada atribute yang sama)
+      2. Specificity => bisa berupa seberapa spesifik selector yang
+                        digunakan. contoh bisa id, class dan juga
+                        atribute dari element tersebut (li[draggable])
+      3. Type => internal, external dan inline css
+                 urutan yang akan tercompile adalah inlince, internal dan
+                 external
+      4. Importance => !important akan di prioritaskan 
+      -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Cascade</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="outer-box" class="box">
+      <div class="box">
+        <p>Yellow Text</p>
+        <div class="box inner-box">
+          <p class="white-text">White Text</p>
+        </div>
+      </div>
+      <div class="box">
+        <p>Yellow Text</p>
+        <div class="box inner-box">
+          <p class="white-text">White Text</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
