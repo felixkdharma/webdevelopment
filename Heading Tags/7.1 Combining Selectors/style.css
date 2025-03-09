@@ -1,0 +1,26 @@
+/* Write your code here: */
+
+/* Group Rule */
+h1, h2 {
+    color: blueviolet;
+}
+
+/* Child Rule */
+.box > p {
+    color: firebrick;
+}
+
+/* Descendant Rule */
+.box li {
+    color: blue;
+}
+
+/* Chaining Rule */
+li.done {
+    color: seagreen;
+}
+
+/* Combining Combiners */
+ul p.done {
+    font-size: 0.5em;
+}
