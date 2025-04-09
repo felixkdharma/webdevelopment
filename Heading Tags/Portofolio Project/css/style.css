@@ -1,0 +1,29 @@
+ body {
+    background-image: linear-gradient(135deg, #505050, #929292);
+    background-repeat: no-repeat;
+    height: auto;
+ }
+
+.h1-custom {
+    font-size: 70px;
+    margin-top: 43vh;
+ }
+
+ .container-paragraph {
+    margin-top: -10px;
+ }
+
+ .container {
+    text-align: center;
+ }
+
+ .intro {
+    margin-top: 50vh;
+ }
+
+.image-radius {
+    
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+}

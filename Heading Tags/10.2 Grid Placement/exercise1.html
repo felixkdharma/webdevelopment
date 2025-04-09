@@ -1,3 +1,6 @@
+ <!-- Grid Column isinya adalah grid-column-start dan grid-column-end -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,9 +27,23 @@
       color: white;
       font-family: Arial, Helvetica, sans-serif;
       background-color: blueviolet;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       /* TODO: Use Flexbox to align the text to the center horizontally and vertically. 
       See goal1 image.
       */
+    }
+
+    .cowboy {
+      grid-column: span 2;
+      background-color: aqua;
+    }
+
+    .astronaut {
+      background-color: coral;
+      order: 1;
+      grid-column: span 2;
     }
   </style>
 </head>
