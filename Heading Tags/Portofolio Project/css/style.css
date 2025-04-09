@@ -4,9 +4,20 @@
     height: auto;
  }
 
+ h2 {
+      font-size: 40px;
+      color: #D0DDD0;
+ }
+
+ p {
+   color: white;
+   font-size: 20px;
+ }
+
 .h1-custom {
-    font-size: 70px;
-    margin-top: 43vh;
+    font-size: 60px;
+    margin-top: 35vh;
+    color: #D0DDD0;
  }
 
  .container-paragraph {
@@ -17,13 +28,77 @@
     text-align: center;
  }
 
- .intro {
-    margin-top: 50vh;
+
+ .wrapper {
+   margin-top: 25vh;
+   display: flex;
+   justify-content: center;  
+   align-items: center;
+   height: auto;       
  }
 
-.image-radius {
-    
-    border-radius: 100%;
-    width: 250px;
-    height: 250px;
+.image-profile {
+   border-radius: 100%;
+   background-image: url(../images/felix.jpeg);
+   background-size: cover;
+   background-position: center;
+   width: 150px;
+   height: 150px;
+}
+
+.about-me {
+   margin-top: 25vh;
+}
+
+.wrapper-about-me {
+   display: flex;
+   justify-content: center;  
+   width: auto;
+   height: auto; 
+}
+
+.card-about-me {
+   background-image: url(../images/console.png);
+   height: 100px;
+   width: 100px;
+   background-size: cover;
+   margin: 7px;
+}
+
+.wrapper-image-about-me {
+   background-color: white;
+   border-radius: 10px;
+   height: 115px;
+   width: 115px;
+}
+
+.card-text{
+   display: flex;
+   flex-direction: column;
+   margin-right: 15px;
+   max-height: 300px;
+   max-width: 400px;
+}
+
+.card-text p {
+   margin-top: -1rem;
+   max-width: 350px;
+   word-wrap: break-word;
+   white-space: normal;
+}
+
+.card-text h2{
+   margin-top: -0.5vh;
+}
+.wrapper-card-about-me {
+   display: grid;
+   grid-template-columns: 150px 250px;
+   height: auto;
+}
+
+.wrapper-card {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 9vh;
 }
