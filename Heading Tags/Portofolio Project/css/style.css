@@ -30,6 +30,10 @@
     font-variation-settings: "wdth" 100;
  }
 
+ .h2-custom {
+   margin-top: 35vh;
+ }
+
  .container-paragraph {
     margin-top: -10px;
  }
@@ -37,7 +41,6 @@
  .container {
     text-align: center;
  }
-
 
  .wrapper {
    margin-top: 25vh;
@@ -47,18 +50,13 @@
    height: auto;       
  }
 
-.image-profile {
-   border-radius: 100%;
-   background-image: url(../images/felix.jpeg);
-   background-size: cover;
-   background-position: center;
-   width: 150px;
-   height: 150px;
-}
-
-.about-me {
-   margin-top: 25vh;
-}
+ .wrapper-footer{
+   margin-top: 5vh;
+   display: flex;
+   justify-content: center;  
+   align-items: center;
+   height: auto;       
+ }
 
 .wrapper-about-me {
    display: flex;
@@ -73,6 +71,17 @@
    height: 200px;
 }
 
+.wrapper-card-contact-me {
+   display: grid;
+   grid-template-columns: auto auto;
+}
+
+.wrapper-card-contact-me p {
+   margin-top: 1vh;
+   margin-left: 0.5vh;
+   margin-right: 2vh;
+}
+
 .wrapper-card {
    display: flex;
    justify-content: center;
@@ -85,6 +94,19 @@
    border-radius: 10px;
    height: 115px;
    width: 115px;
+}
+
+.image-profile {
+   border-radius: 100%;
+   background-image: url(../images/felix.jpeg);
+   background-size: cover;
+   background-position: center;
+   width: 150px;
+   height: 150px;
+}
+
+.about-me {
+   margin-top: 25vh;
 }
 
 .card-gamecontroller {
