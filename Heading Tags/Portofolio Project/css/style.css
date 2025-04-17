@@ -19,6 +19,16 @@
    font-size: 22px;
  }
 
+ .button-click-me {
+   padding: 10px 20px;
+   background-color: #4CAF50;
+   font-size: 20px;
+   color: white;
+   border: none;
+   border-radius: 10px;
+   
+ }
+
 .h1-custom {
     font-size: 60px;
     margin-top: 35vh;
@@ -31,7 +41,7 @@
  }
 
  .h2-custom {
-   margin-top: 35vh;
+   margin-top: 15vh;
  }
 
  .container-paragraph {
@@ -69,6 +79,7 @@
    display: grid;
    grid-template-columns: 150px 250px;
    height: 200px;
+   margin-right: 200px;
 }
 
 .wrapper-card-contact-me {
@@ -146,7 +157,7 @@
    flex-direction: column;
    margin-right: 15px;
    max-height: 300px;
-   max-width: 400px;
+   width: 400px;
 }
 
 .card-text p {
@@ -160,3 +171,9 @@
    margin-top: -0.5vh;
    font-size: 30px;
 }
+
+/* @media (min-width: 319px) and (max-width: 480px) {
+   body {
+     background-color: lightsalmon;
+   }
+ }  */
