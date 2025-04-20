@@ -1,0 +1,38 @@
+.align-center {
+    text-align: center;
+    margin-top: 25vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-dice {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    text-align: center;
+}
+
+.dice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: repeat(3, 1fr);
+    background-color: red;
+    margin-top: 5vh;
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+}
+
+.dot-dice {
+    background-color: yellow;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto;
+}

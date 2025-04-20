@@ -1,2 +1,1 @@
-var button = document.getElementsByTagName = "button";
-button.backgroundcolor = "red";
+var button = document.firstElementChild
