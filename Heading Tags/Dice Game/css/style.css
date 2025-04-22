@@ -1,6 +1,36 @@
+#footer {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    /* margin-top: 10vh; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-result {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
 .align-center {
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
 .container {
@@ -10,7 +40,7 @@
 }
 
 .container-dice {
-    margin-top: 10vh;
+    margin-top: 3vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 130px;

@@ -165,6 +165,7 @@ function rollDice() {
     getDice2();
     getTheWinner();
 }
+
 function getDice2() {
 
     var getDice2 = Math.floor(Math.random() * 6 + 1);
@@ -287,7 +288,7 @@ function getTheWinner() {
 
     const winner = document.getElementById("result");
     winner.className = "align-center";
-    winner.style.marginTop = "12vh";
+    winner.style.marginTop = "8vh";
 
     if (dice1 > dice2) {
         result = "Player 1 Win!";
