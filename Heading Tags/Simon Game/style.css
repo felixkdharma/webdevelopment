@@ -1,0 +1,50 @@
+body {
+    background-color: #1B1A55;
+}
+h1 {
+    font-size: 4rem;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.button {
+    border: 10px solid;
+    border-radius: 30px;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    font-size: 0px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    
+}
+
+.wrapper-button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.r {
+    background-color: red;
+}
+
+.g {
+    background-color: green;
+}
+
+.b {
+    background-color: blue;
+}
+
+.y {
+    background-color: yellow;
+}

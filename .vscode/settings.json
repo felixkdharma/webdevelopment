@@ -1,3 +1,4 @@
 {
-    "emmet.triggerExpansionOnTab": true
+    "emmet.triggerExpansionOnTab": true,
+    "livePreview.defaultPreviewPath": "/Heading Tags/Simon Game/index.html"
 }
