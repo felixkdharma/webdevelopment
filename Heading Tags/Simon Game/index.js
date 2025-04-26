@@ -3,156 +3,67 @@ var arrayUserOrder = [];
 var correct = true;
 var startGame = false;
 var gameOver = false;
+var level = 1;
 
 $(document).keypress(function (event) {
-  //   debugger;
   var key = event.key;
 
+  console.log(key);
   if (key === "a") {
     $("h1").text("Level 1");
     startGame = true;
-    generateFirstSequence();
-  } else {
-    $("h1").text("Press A to Start the Game");
-    generateFirstSequence();
+
+    generateLevel();
   }
 });
 
 function clickButton(e) {
-  debugger;
-  var classButton = $(e).attr("class");
+  // debugger;
+  const $btn = $(e);
 
-  if (classButton === "button r") {
-    $(e).fadeOut(200, function () {
-      $(e).fadeIn(200, function () {
-        arrayUserOrder.push("r");
-        checkSequence();
-        generateSequence();
-      });
-    });
-  } else if (classButton === "button g") {
-    $(e).fadeOut(200, function () {
-      $(e).fadeIn(200, function () {
-        arrayUserOrder.push("g");
-        checkSequence();
-        generateSequence();
-      });
-    });
-  } else if (classButton === "button y") {
-    $(e).fadeOut(200, function () {
-      $(e).fadeIn(200, function () {
-        arrayUserOrder.push("y");
-        checkSequence();
-        generateSequence();
-      });
-    });
-  } else if (classButton === "button b") {
-    $(e).fadeOut(200, function () {
-      $(e).fadeIn(200, function () {
-        arrayUserOrder.push("b");
-        checkSequence();
-        generateSequence();
-      });
-    });
+  if ($btn.hasClass("r")) {
+    arrayUserOrder.push("red");
+    $btn.addClass("pressed");
+    setTimeout(function () {
+      $btn.removeClass("pressed");
+    }, 100);
+  } else if ($btn.hasClass("b")) {
+    arrayUserOrder.push("blue");
+    $btn.addClass("pressed");
+    setTimeout(function () {
+      $btn.removeClass("pressed");
+    }, 100);
+  } else if ($btn.hasClass("g")) {
+    arrayUserOrder.push("green");
+    $btn.addClass("pressed");
+    setTimeout(function () {
+      $btn.removeClass("pressed");
+    }, 100);
+  } else if ($btn.hasClass("y")) {
+    arrayUserOrder.push("yellow");
+    $btn.addClass("pressed");
+    setTimeout(function () {
+      $btn.removeClass("pressed");
+    }, 100);
   }
 }
 
-function generateSequence() {
+function generateLevel() {
   var randomNumber = Math.floor(Math.random() * 4) + 1;
 
-  if (correct === true) {
-    if (randomNumber === 1) {
-      arrayColerOrder.push("r");
-      $(".button.r").hide();
-      $(".button.r").fadeIn();
-    } else if (randomNumber === 2) {
-      arrayColerOrder.push("g");
-      $(".button.g").hide();
-      $(".button.g").fadeIn();
-    } else if (randomNumber === 3) {
-      arrayColerOrder.push("b");
-      $(".button.b").hide();
-      $(".button.b").fadeIn();
-    } else if (randomNumber === 4) {
-      arrayColerOrder.push("y");
-      $(".button.y").hide();
-      $(".button.y").fadeIn();
-    }
-  } else {
-    arrayColerOrder.length = 0;
-    arrayUserOrder.length = 0;
-    correct = false;
-    gameOver = true;
-    generateFirstSequence();
+  if (randomNumber === 1) {
+    arrayColerOrder.push("red");
+    $(".button.r").fadeOut(200).fadeIn(200);
+  } else if (randomNumber === 2) {
+    arrayColerOrder.push("blue");
+    $(".button.b").fadeOut(200).fadeIn(200);
+  } else if (randomNumber === 3) {
+    arrayColerOrder.push("green");
+    $(".button.g").fadeOut(200).fadeIn(200);
+  } else if (randomNumber === 4) {
+    arrayColerOrder.push("yellow");
+    $(".button.y").fadeOut(200).fadeIn(200);
   }
 }
 
-function generateFirstSequence() {
-  //   debugger;
-  if (startGame === true) {
-    if (gameOver === false) {
-      var randomNumber = Math.floor(Math.random() * 4) + 1;
-      if (randomNumber === 1) {
-        arrayColerOrder.push("r");
-        $(".button.r").hide();
-        $(".button.r").fadeIn();
-      }
-
-      if (randomNumber === 2) {
-        arrayColerOrder.push("g");
-        $(".button.g").hide();
-        $(".button.g").fadeIn();
-      }
-
-      if (randomNumber === 3) {
-        arrayColerOrder.push("b");
-        $(".button.b").hide();
-        $(".button.b").fadeIn();
-      }
-
-      if (randomNumber === 4) {
-        arrayColerOrder.push("y");
-        $(".button.y").hide();
-        $(".button.y").fadeIn();
-      }
-    } else {
-      $("h1").text("Game Over, Prees Any Key to Restart");
-      $(document).keypress(function () {
-        if (randomNumber === 1) {
-          arrayColerOrder.push("r");
-          $(".button.r").hide();
-          $(".button.r").fadeIn();
-        } else if (randomNumber === 2) {
-          arrayColerOrder.push("g");
-          $(".button.g").hide();
-          $(".button.g").fadeIn();
-        } else if (randomNumber === 3) {
-          arrayColerOrder.push("b");
-          $(".button.b").hide();
-          $(".button.b").fadeIn();
-        } else if (randomNumber === 4) {
-          arrayColerOrder.push("y");
-          $(".button.y").hide();
-          $(".button.y").fadeIn();
-        }
-      });
-    }
-  }
-}
-
-function checkSequence() {
-  //   debugger;
-  if (arrayUserOrder.length === arrayColerOrder.length) {
-    for (var i = 0; i < arrayUserOrder.length; i++) {
-      if (arrayUserOrder[i] !== arrayColerOrder[i]) {
-        correct = false;
-        console.log(correct);
-      } else {
-        correct = true;
-        console.log(correct);
-      }
-    }
-  }
-
-  return correct;
-}
+function checkAnswer(currentLevel) {}
