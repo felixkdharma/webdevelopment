@@ -1,0 +1,42 @@
+<%- include("partials/header") %>  
+
+<h1 id="header"> Let's Chit Chat about You Today </h1>
+
+<% if (locals.data) { %>
+
+    <div class="container-card">
+
+    <% data.forEach(item=> { %>
+        <div class="card-post">
+            
+            <h3> <%= item.user %> </h3>
+            
+            <p> <%= item.post %> </p>
+
+        </div>
+    <% }); %>
+
+    <button onclick="showPopup()">Buka Form</button>
+
+    <!-- Pop-up Form -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3>Form Pop-Up</h3>
+        <form action="/submit" method="POST">
+          <input type="text" name="username" placeholder="Nama Anda" required>
+          <br><br>
+          <button type="submit">Kirim</button>
+        </form>
+        <button class="close-btn" onclick="closePopup()">Tutup</button>
+      </div>
+    </div>
+
+    </div>
+    
+<% } %>
+
+<script src="/js/popup.js"></script>
+
+</body>
+
+</html>
