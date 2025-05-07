@@ -16,18 +16,25 @@
         </div>
     <% }); %>
 
-    <button onclick="showPopup()">Buka Form</button>
+    <button onclick="showPopup()">Yuk Curhat!</button>
 
     <!-- Pop-up Form -->
     <div id="popup" class="popup">
       <div class="popup-content">
-        <h3>Form Pop-Up</h3>
+        <h3>Jangan malu buat Curhat Ya!! </h3>
         <form action="/submit" method="POST">
-          <input type="text" name="username" placeholder="Nama Anda" required>
+          <input type="text" name="username" placeholder="Username" required>
           <br><br>
-          <button type="submit">Kirim</button>
+          <textarea type="text" 
+                    id="textarea" 
+                    oninput="autoResize(this)" 
+                    class="input-post" 
+                    name="posts" 
+                    placeholder="Yuk, Dikeluarin aja semua"> </textarea>
+          <br><br>
+          <button class="submit-btn" type="submit">Kirim</button>
+          <button class="close-btn" type="button" onclick="closePopup()">Tutup</button>
         </form>
-        <button class="close-btn" onclick="closePopup()">Tutup</button>
       </div>
     </div>
 
@@ -35,7 +42,8 @@
     
 <% } %>
 
-<script src="/js/popup.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/styles/js/popup.js"></script>
 
 </body>
 
