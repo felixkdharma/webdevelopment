@@ -25,8 +25,10 @@ body {
 
 .card-post {
   border: 5px solid black;
+  position: relative;
+  background-color: #61677A;
   border-radius: 15px;
-  max-width: 350px;
+  width: 350px;
   max-height: auto;
   display: block;
   margin: 25px;
@@ -77,9 +79,35 @@ button {
     margin-right: 10px;
 }
 
+.button-delete-loc {
+
+  display: flex;
+  justify-content: flex-end;
+}
+
 .input-post {
   width: 500px;
   height: auto;
   overflow: hidden;
   resize: none;
+}
+
+.menu-trigger {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 30px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.menu-popup {
+  position: absolute;
+  display: none;
+  top: 290px;
+  right: 330px;
+  width: 120px;
+  height: 30px;
+  background-color: whitesmoke;
+  border-radius: 20px;
 }

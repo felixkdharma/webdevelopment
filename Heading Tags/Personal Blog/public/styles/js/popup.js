@@ -18,3 +18,9 @@ function autoResize(textarea) {
   textarea.style.height = "auto";               // Reset dulu
   textarea.style.height = textarea.scrollHeight + "px"; // Sesuaikan dengan konten
 }
+
+function hideMenu() {
+
+  $(".menu-popup").css("display", "block");
+
+}

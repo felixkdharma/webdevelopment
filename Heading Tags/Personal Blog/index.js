@@ -13,6 +13,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
     res.render("index.ejs", {data});
+    // console.log(req.body.index);
+});
+
+app.post("/submit", (req, res) => {
+
+    const {username, posts}  = req.body;
+
+    data.push({user: username, post: posts});
+
+    res.redirect("/");
+    // res.render("index.ejs", {data});
+
+});
+
+app.post("/delete", (req, res) => {
+
+    const index = parseInt(req.body.index);
+    
+    data.splice(index, 1);
+
+    res.redirect("/");
 });
 
 app.listen(port, () => {
