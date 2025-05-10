@@ -1,1 +1,3 @@
 test fungsi git add, git commit dan git checkout
+
+ini ada contoh dari git merge branch
