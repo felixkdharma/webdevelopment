@@ -33,12 +33,13 @@ app.use(express.static("public"));
 app.get("/", async (req, res) => {
   //Write your code here.
   const result = await db.query("SELECT country_code FROM visited_countries");
+
   let countries = [];
 
   result.rows.forEach((country) => {
     countries.push(country.country_code);
   });
-  console.log(result.rows);
+  // console.log(result.rows);
   res.render("index.ejs", { countries: countries, total: countries.length });
 
   // db.end();
@@ -55,6 +56,28 @@ app.get("/", async (req, res) => {
   //   });
   //   console.log(countryCodes);
   // }
+});
+
+app.post("/add", async (req, res) => {
+
+    const country = req.body.country;
+
+    const resultCountryCode = await db.query(`SELECT country_code FROM countries
+              WHERE country_name ILIKE $1 LIMIT 1;`, [country]);
+
+    if (resultCountryCode.rows.length !== 0) {
+        const getCountryCode = resultCountryCode.rows[0].country_code;
+
+        await db.query(`INSERT INTO visited_countries (country_code)
+              VALUES ($1)`, [getCountryCode]);
+        total += 1;
+
+    }
+
+    res.redirect("/");
+    // console.log(getCountryCode);
+    // console.log(resultCountryCode);
+
 });
 
 app.listen(port, () => {
