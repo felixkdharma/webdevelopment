@@ -64,7 +64,7 @@ app.post("/add", async (req, res) => {
 
     const resultCountryCode = await db.query(`SELECT country_code FROM countries
               WHERE country_name ILIKE $1 LIMIT 1;`, [country]);
-
+    console.log(resultCountryCode);
     if (resultCountryCode.rows.length !== 0) {
         const getCountryCode = resultCountryCode.rows[0].country_code;
 
@@ -75,8 +75,7 @@ app.post("/add", async (req, res) => {
     }
 
     res.redirect("/");
-    // console.log(getCountryCode);
-    // console.log(resultCountryCode);
+
 
 });
 
