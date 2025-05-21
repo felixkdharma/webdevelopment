@@ -45,6 +45,7 @@ async function getCurrentUser() {
 app.get("/", async (req, res) => {
   const countries = await checkVisisted();
   const currentUser = await getCurrentUser();
+  console.log(currentUser);
   res.render("index.ejs", {
     countries: countries,
     total: countries.length,

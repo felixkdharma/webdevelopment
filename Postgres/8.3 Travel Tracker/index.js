@@ -62,6 +62,11 @@ app.post("/add", async (req, res) => {
 
     const country = req.body.country;
 
+    try {
+
+    } catch (error) {
+
+    }
     const resultCountryCode = await db.query(`SELECT country_code FROM countries
               WHERE country_name ILIKE $1 LIMIT 1;`, [country]);
     console.log(resultCountryCode);
