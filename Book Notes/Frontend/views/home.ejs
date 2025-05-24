@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+
+<h1> Hello </h1>
+<% if (locals.books)  { %>
+
+    <% for (let i = 0; i < books.length; i++) { %>
+
+        <img src="<%= image.source_url %>" alt="cover" style="width: 200px; height: 300px;">
+        
+        <p> <%= books[i].title %> </p>
+
+    <% } %>
+    
+<% }%>
+
+<%- include("partials/footer") %>
