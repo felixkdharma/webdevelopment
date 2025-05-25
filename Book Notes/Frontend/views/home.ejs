@@ -1,16 +1,24 @@
 <%- include("partials/header") %>
 
-<h1> Hello </h1>
-<% if (locals.books)  { %>
+<body>
+  <h1>Hello</h1>
+  <% if (locals.books) { %> <% for (let i = 0; i < books.length; i++) { %>
 
-    <% for (let i = 0; i < books.length; i++) { %>
+  <img
+    src="<%= image.source_url %>"
+    alt="cover"
+    style="width: 200px; height: 300px"
+  />
 
-        <img src="<%= image.source_url %>" alt="cover" style="width: 200px; height: 300px;">
-        
-        <p> <%= books[i].title %> </p>
+  <p><%= books[i].title %></p>
 
-    <% } %>
-    
-<% }%>
+  <% } %> <% }%>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"
+  ></script>
+</body>
 
 <%- include("partials/footer") %>
